@@ -13,12 +13,16 @@ nltk.download('punkt')
 
 def reproducir_mp3(ruta_archivo):
     
-    # Utilizar el comando afplay para reproducir el archivo MP3
-    subprocess.run(["afplay", ruta_archivo]) 
+    # Utilizar el comando afplay para reproducir el archivo MP3 des de MacOs
+    # subprocess.run(["afplay", ruta_archivo]) 
+
     
-    # subprocess.run(["ffplay", "-nodisp", "-autoexit", ruta_archivo])
-    ruta_mp3 = "/root/salida.mp3"  # Ajusta el nombre del archivo según sea necesario 
-    reproducir_mp3(ruta_mp3) 
+    # Utilizar el comando ffplay para reproducir el archivo MP3 des de Linux
+    #subprocess.run(["ffplay", ruta_archivo]) 
+    
+    subprocess.run(["ffplay", "-nodisp", "-autoexit", ruta_archivo])
+    # ruta_mp3 = "/root/salida.mp3"  # Ajusta el nombre del archivo según sea necesario 
+    # reproducir_mp3(ruta_mp3) 
 
 
 def convertir_articulo_a_audio(url):
@@ -37,7 +41,7 @@ def convertir_articulo_a_audio(url):
     tts.save("salida.mp3")
 
     # Reproducir el archivo de audio (puedes utilizar un reproductor de audio externo)
-    reproducir_mp3("/root/salida.mp3")
+    reproducir_mp3("salida.mp3")
 
 if __name__ == "__main__":
     # Proporciona la URL del artículo que deseas convertir

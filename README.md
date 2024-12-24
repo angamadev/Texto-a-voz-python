@@ -89,6 +89,15 @@ El proyecto utiliza las siguientes bibliotecas:
 
 - Si estás en un entorno sin interfaz gráfica, asegúrate de tener un reproductor de audio basado en terminal.
 
+- Recomiendo crear un entorno virtual e instalar las dependencias
+
+   Ejecuta el script:
+   ```bash
+   python3 -m venv env
+   source env/bin/activate
+   pip install -r requirements.txt
+   ```
+
 ---
 
 ## 📚 Licencia
